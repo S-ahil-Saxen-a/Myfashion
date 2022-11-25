@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+/* #main{
+    width: 100%;
+    height: 100%;
+} */
+
+.section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#video{
+    position: relative;
+}
+
+#text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Starkey PERSONAL USE";
+    
+}
+
+#text h1{
+    font-size: 90px;
+    font-weight: 100;
+    letter-spacing: 6px;
+    color: rgb(30, 30, 30);
+    /* color: transparent; */
+    /* filter: drop-shadow(50px white); */
+    text-shadow: 1px 1px  white;
+    /* -webkit-text-stroke: 2px black; */
+}
+
+#text h5{
+    font-size: 20px;
+    color: #dadada;
+    font-weight: 200;
+    letter-spacing: 8px;
+}
+
+span{
+    display: inline-block;
+}
+
+#two{
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+#two #des{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 120px 30px 0px 30px;
+}
+
+#two #des p{
+    font-size: 25px;
+}
+
+#two #des #destextthree{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#two #des #destextthree button{
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+#two #des #destextthree button:hover{
+    /* border-bottom: black; */
+    background-color: #a5ffff;
+    cursor: pointer;
+}
+
+#two #des #destextthree button h2{
+    font-family: "Starkey PERSONAL USE";
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 8px;
+    
+}
+
+#two #des #destextthree h1{
+    font-family: "Starkey PERSONAL USE";
+    letter-spacing: 10px;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+#two #image{
+    width: 50%;
+    height: 100%;
+}
+
+#two #image img{
+    margin-top: 50px;
+    height: 80%;
+}
+
+#subimg{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 27.5%;
+    right: 20%;
+    width: 170px;
+    height: 240px;
+    background-image: url("https://images.unsplash.com/photo-1551854838-212c50b4c184?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80");
+    background-size: cover;
+    background-position: bottom;
+}
+
+#four{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+#four img{
+    height: 600px;
+    position: relative;
+    z-index: 999;
+    /* width: 2%;
+    object-fit: cover; */
+}
+
+#scroll-div{
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div h1{
+    display: inline-block;
+    font-size: 130px;
+    font-family: gilroy;
+    margin-right: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#scroll-div2{
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 1000;
+}
+
+#scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div2 h1{
+    display: inline-block;
+    font-size: 130px;
+    font-family: gilroy;
+    margin-right: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    margin-top: 15px;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-div3{
+    position: absolute;
+    top: 62%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div3::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div3 h1{
+    display: inline-block;
+    font-size: 130px;
+    font-family: gilroy;
+    margin-right: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    animation-name: scroll;
+    animation-direction: reverse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(calc(-100% - 13px));
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+#three{
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+#three h1{
+    font-family: "Starkey PERSONAL USE";
+    font-weight: 100;
+    letter-spacing: 25px;
+    position: absolute;
+    top: 5%;
+    right: 14%;
+    font-size: 100px;
+}
+
+#three h2{
+    /* width: 100vw; */
+    /* text-align: center; */
+    font-size: 80px;
+    position: absolute;
+    font-family: "Fashionable";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.skewdiv span{
+    /* margin-top: 260px; */
+    background-color: burlywood;
+    font-size: 54px;
+}
+
+#skewd1{
+    transform: skew(15deg) rotate(6deg);
+}
+
+#skewd2{
+    transform: skew(-15deg) rotate(-6deg);
+}
+
+.swiper {
+    border: 2px solid black;
+    width: 60%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #BFBDBF;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 350px;
+    height: 550px;
+    object-fit: cover;
+}
+
+#five{
+    position: relative;
+    background-color: #BFBDBF;
+}
+
+.pagedes{
+    height: 100%;
+    width: 40%;
+    padding: 50px;
+    background-color: #201f20;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagedes h1{
+    font-family: Elfashion Free;
+    position: absolute;
+    left: 9.5%;
+    top: 4%;
+    z-index: 999;
+    letter-spacing: 9px;
+    color: rgba(255, 255, 255, 0.541);
+    /* color: black; */
+    font-size: 7rem;
+}
+
+.pagedes span{
+    color: #201f20;
+}
+
+.pagedes #fiveText{
+    letter-spacing: 1px;
+    height: 100vh;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.541);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
